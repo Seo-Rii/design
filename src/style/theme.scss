@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+$primary: #6b67c7;
+$secondary: #00ff00;
+$surface: #eceef3;
+$on-primary: #ffffff;
+$on-surface: #000000;
+
+:root {
+  --mt-primary: #{$primary};
+  --mt-secondary: #{$secondary};
+  --mt-surface: #{$surface};
+  --mt-on-primary: #{$on-primary};
+  --mt-on-surface: #{$on-surface};
+
+
+  --mc-ripple-color: #000000;
+  --mc-ripple-duration: 0.3s;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
