@@ -1,7 +1,8 @@
 <script lang="ts">
     export let progress = 0,
         width = '100%',
-        indeterminate = false
+        indeterminate = false,
+        color = 'var(--mt-primary)';
 </script>
 
 <style lang="scss">
@@ -27,7 +28,7 @@
     top: -1px;
     left: 0;
     height: 6px;
-    background-color: var(--mt-primary);
+    background-color: var(--progress-color);
     border-radius: 5px;
     transition: all 0.3s ease;
   }
@@ -81,7 +82,7 @@
 </style>
 
 <div class="progressContainer" style="width: {width};">
-    <div class="progressBar">
+    <div class="progressBar" style="--progress-color: {color};">
         {#if indeterminate}
             <div class="progressIndicator ind-1"></div>
             <div class="progressIndicator ind-2"></div>

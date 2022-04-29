@@ -11,6 +11,7 @@
         argTypes={{
     label: { control: "text" },
     primary: { control: "boolean" },
+    raised: { control: "boolean" },
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
@@ -24,32 +25,32 @@
     </Container>
 </Template>
 
-<Story
-        name="Primary"
-        args={{
+<Story name="Primary" args={{
+    label: "Button",
     primary: true,
+  }}
+/>
+
+<Story name="Secondary" args={{
     label: "Button",
   }}
 />
 
-<Story
-        name="Secondary"
-        args={{
+<Story name="Large" args={{
     label: "Button",
-  }}
-/>
-<Story
-        name="Large"
-        args={{
     size: "large",
-    label: "Button",
   }}
 />
 
-<Story
-        name="Small"
-        args={{
-    size: "small",
+<Story name="Small" args={{
     label: "Button",
+    size: "small",
+  }}
+/>
+
+<Story name="Raised" args={{
+    label: "Button",
+    raised: true,
+    primary: true,
   }}
 />

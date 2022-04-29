@@ -6,6 +6,7 @@
     height: 62px;
     z-index: 5;
     bottom: -1px;
+    left: 0;
     background: #ffffff;
     border-radius: 15px 15px 0 0;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -21,9 +22,13 @@
       height: 62px;
     }
   }
+
+  .marginFix {
+    height: 62px;
+  }
 </style>
 
-<div style="height: 62px;"/>
+<div class="marginFix"/>
 <footer>
     <div class="wrapper">
         <slot/>

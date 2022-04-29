@@ -25,6 +25,6 @@
 
 <div class="list">
     <div class="container">
-        <TwoLine title="풀빛마루" subtitle="3분"/>
+        <slot/>
     </div>
 </div>

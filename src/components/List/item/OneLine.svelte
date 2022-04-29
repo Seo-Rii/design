@@ -2,8 +2,7 @@
     import Ripple from "../../Ripple.svelte";
 
     export let meta: any,
-        title: '',
-        subtitle: '';
+        title: '';
 </script>
 
 <style lang="scss">
@@ -39,12 +38,6 @@
       margin: 2px;
       font-weight: 700;
     }
-
-    h2 {
-      font-size: 16px;
-      margin: 2px;
-      font-weight: 500;
-    }
   }
 </style>
 
@@ -55,7 +48,6 @@
         {/if}
         <div class="body">
             <h1>{title}</h1>
-            <h2>{subtitle}</h2>
         </div>
         <Ripple primary={false}/>
     </div>

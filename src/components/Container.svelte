@@ -1,31 +1,78 @@
 <style lang="scss">
+  /* fallback */
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  }
+
+  /* fallback */
+  @font-face {
+    font-family: 'Material Icons Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialiconsoutlined/v101/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2');
+  }
+
+  /* fallback */
+  @font-face {
+    font-family: 'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialiconsround/v100/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmP.woff2) format('woff2');
+  }
+
+  /* fallback */
+  @font-face {
+    font-family: 'Material Icons Sharp';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialiconssharp/v101/oPWQ_lt5nv4pWNJpghLP75WiFR4kLh3kvmvR.woff2) format('woff2');
+  }
+
   div {
     width: 100%;
     height: 100%;
-    padding: 10px;
     margin: 0;
     background: var(--mt-surface);
 
-    & :global(*) {
+    :global(*) {
       font-family: 'Noto Sans KR', sans-serif;
     }
 
-    & :global(h1) {
+    :global(h1) {
       font-size: 36px;
       font-weight: 700;
       margin: 6px 0 6px 10px;
       display: inline-block;
     }
 
-    & :global(h2) {
+    :global(h2) {
       font-size: 24px;
       font-weight: 700;
       margin: 6px 0 6px 10px;
       display: inline-block;
     }
 
-    & :global(main) {
+    :global(main) {
       padding: 20px;
+    }
+
+    :global(.icon), :global(.icon *) {
+      font-family: 'Material Icons' !important;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
     }
   }
 </style>
