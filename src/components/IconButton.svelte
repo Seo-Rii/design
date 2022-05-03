@@ -2,7 +2,8 @@
     import Ripple from "./Ripple.svelte";
 
     export let icon,
-        size: ('small' | 'medium' | 'large') = 'medium';
+        size: ('small' | 'medium' | 'large') = 'medium',
+        ripple = true;
 </script>
 
 <style lang="scss">
@@ -45,5 +46,7 @@
 
 <button type='button' class="icon {size}">
     {icon}
-    <Ripple zIndex={2} center primary={false}/>
+    {#if ripple}
+        <Ripple zIndex={2} center primary={false}/>
+    {/if}
 </button>

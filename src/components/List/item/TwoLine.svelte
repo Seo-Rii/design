@@ -1,8 +1,7 @@
 <script lang="ts">
     import Ripple from "../../Ripple.svelte";
 
-    export let meta: any,
-        title: '',
+    export let title: '',
         subtitle: '';
 </script>
 
@@ -34,6 +33,10 @@
       flex-direction: column;
     }
 
+    .suffix {
+      margin-left: auto;
+    }
+
     h1 {
       font-size: 24px;
       margin: 2px;
@@ -50,13 +53,20 @@
 
 <div>
     <div class="container">
-        {#if meta}
-            <div class="head">{meta}</div>
+        {#if $$slots.prefix}
+            <div class="prefix">
+                <slot name="prefix"></slot>
+            </div>
         {/if}
         <div class="body">
             <h1>{title}</h1>
             <h2>{subtitle}</h2>
         </div>
+        {#if $$slots.suffix}
+            <div class="suffix">
+                <slot name="suffix"></slot>
+            </div>
+        {/if}
         <Ripple primary={false}/>
     </div>
 </div>

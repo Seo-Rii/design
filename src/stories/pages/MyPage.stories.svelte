@@ -2,17 +2,17 @@
     import '../../style/theme.scss'
     import {Meta, Template, Story} from "@storybook/addon-svelte-csf";
     import {viewportConfig} from '../util/config'
-    import Buy from "../../pages/Buy.svelte";
+    import MyPage from "../../pages/MyPage.svelte";
 </script>
 
-<Meta title="Page/Buy" component={Buy} parameters={{
+<Meta title="Page/MyPage" component={MyPage} parameters={{
         layout: 'fullscreen',
         ...viewportConfig(true),
     }}
 />
 
 <Template let:args>
-    <Buy/>
+    <MyPage/>
 </Template>
 
-<Story name="Buy"/>
+<Story name="MyPage"/>

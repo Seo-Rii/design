@@ -45,7 +45,7 @@
     function rippleHideEvent(event: MouseEvent | TouchEvent) {
         if (event.type.startsWith('touch')) touchSupport = true;
         if (touchSupport && event.type.startsWith('mouse')) return;
-        timeout = setTimeout(() => show = false, Math.max(0, duration - (Date.now() - rippleBeginTime)));
+        timeout = setTimeout(() => show = false, 10 + Math.max(0, duration - (Date.now() - rippleBeginTime)));
     }
 
     onMount(() => {
@@ -57,7 +57,7 @@
         container?.addEventListener('touchcancel', rippleHideEvent);
     })
 
-    onDestroy(()=>{
+    onDestroy(() => {
         container?.removeEventListener('mousedown', rippleShowEvent);
         container?.removeEventListener('mouseup', rippleHideEvent);
         container?.removeEventListener('touchstart', rippleShowEvent);
@@ -93,7 +93,7 @@
         opacity: var(--ripple-opacity);
       }
 
-      transition: opacity 0.2s ease-out;
+      transition: opacity 0.3s ease-out;
     }
 
     @keyframes ripple {
